@@ -35,7 +35,7 @@ int check(int pos){
         cur += pi[j];
         int other = check(j+1);
         if (exists[cur]){
-            cout << cur << "\t" << other << "\t" << ans <<"\t"  << '\n';
+            //cout << cur << "\t" << other << "\t" << ans <<"\t"  << '\n';
             if (other != -1)
                ans = min(ans, 1 + other);
     

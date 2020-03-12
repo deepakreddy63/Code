@@ -44,7 +44,7 @@ int getLevelDiff(Node *root)
                st_even.push(cur->left);
             if (cur->right != nullptr)
                st_even.push(cur->right);
-            cout << cur ->data << " " << st_even.size() << '\n';
+            //cout << cur ->data << " " << st_even.size() << '\n';
            st_odd.pop();
        }
        lvl = 1;
@@ -57,7 +57,7 @@ int getLevelDiff(Node *root)
               st_odd.push(cur->left);
            if (cur->right != nullptr)
               st_odd.push(cur->right);
-           cout << cur ->data << '\n';
+           //cout << cur ->data << '\n';
            st_even.pop();
        }
        lvl = 0;

@@ -1,0 +1,8 @@
+# Travis check for C++ 
+
+a.out
+pi_spaces
+getlvldiff
+*.o
+*.a
+*.so
