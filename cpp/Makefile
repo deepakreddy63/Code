@@ -3,12 +3,11 @@
 CXXFLAGS = -g -Wall -Wfatal-errors -std=c++14
 
 SRC = cpp
-ALL0 = pi_spaces
-ALL1 = getlvldiff
+ALL = pi_spaces getlvldiff
 
-all: $(ALL0) $(ALL1)
+all: $(ALL) 
 
-pi_spaces: pi_spaces.cpp Makefile
+pi_spaces: pi_spaces.cpp
 	$(CXX) $(CXXFLAGS) -o $@ $@.cpp
 
 getlvldiff: getlvldiff.cpp Makefile
