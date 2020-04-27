@@ -1,0 +1,24 @@
+#!/bin/bash
+
+tn=1
+t() {
+    echo Test $tn $@
+}
+pass() {
+    echo Test $tn OK
+    tn=$(($tn+1))
+}
+fail() {
+    echo Test $tn FAILED
+    exit 1
+}
+
+t program should run
+./pi_spaces >/dev/null 2>&1 && pass || fail
+
+OUTPUT=$(./pi_spaces)
+t program output is $OUTPUT && pass || fail
+
+OUTPUT=$(./getlvldiff)
+t program output is $OUTPUT && pass || fail
+echo ALL TESTS PASSED
