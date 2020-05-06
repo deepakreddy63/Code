@@ -17,8 +17,8 @@ t program should run
 ./pi_spaces >/dev/null 2>&1 && pass || fail
 
 OUTPUT=$(./pi_spaces)
-t program output is $OUTPUT && pass || fail
+t pi_spaces output is $OUTPUT && pass || fail
 
 OUTPUT=$(./getlvldiff)
-t program output is $OUTPUT && pass || fail
+t getlvldiff output is $OUTPUT && pass || fail
 echo ALL TESTS PASSED

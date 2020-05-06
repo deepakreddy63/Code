@@ -7,12 +7,10 @@ ALL = pi_spaces getlvldiff
 
 all: $(ALL) 
 
-pi_spaces: pi_spaces.cpp
+%: %.cpp
 	$(CXX) $(CXXFLAGS) -o $@ $@.cpp
 
-getlvldiff: getlvldiff.cpp Makefile
-	$(CXX) $(CXXFLAGS) -o $@ $@.cpp
-
+.PHONY: clean
 clean:
 	$(RM) $(ALL) *.o
 
